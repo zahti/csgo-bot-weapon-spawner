@@ -23,7 +23,7 @@ public Plugin myinfo =
 {
     name = "Bot Weapon Spawner",
     author = "Zahti,LuqS,Cruze",
-    description = "Gives a specific item to all bots",
+    description = "Forces all bots to get a specific weapon.",
     version = "1.0.1",
     url = "https://github.com/zahti/csgo-bot-weapon-spawner"
 };
@@ -34,8 +34,8 @@ public void OnPluginStart()
     if(GetEngineVersion() != Engine_CSGO) 
         SetFailState("This plugin is for CSGO only.");
         
-    g_cvEnabled = CreateConVar("bws_enabled", "1", "Whether the 'Bot Weapon Spawner' Plugin is enabled");
-    g_cvWeapon = CreateConVar("bws_weapon", "ak47", "Weapon to give");
+    g_cvEnabled = CreateConVar("bws_enabled", "1", "Disable [0] or Enable [1] the plugin. Default [1]");
+    g_cvWeapon = CreateConVar("bws_weapon", "ak47", "Specify which weapon all of the bots are given. Do not include the 'weapon_' string. Default [ak47]");
     
     HookEvent("player_spawn", Event_PlayerSpawn);
 }
