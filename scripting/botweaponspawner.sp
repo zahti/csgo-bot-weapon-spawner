@@ -24,11 +24,11 @@ public Plugin myinfo =
     name = "Bot Weapon Spawner",
     author = "Zahti,LuqS,Cruze",
     description = "Forces all bots to get a specific weapon.",
-    version = "1.0.1",
+    version = "1.0.2",
     url = "https://github.com/zahti/csgo-bot-weapon-spawner"
 };
 
-public void OnPluginStart()
+public void OnAllPluginsLoaded()
 {
     // Not gonna waste time :D //
     if(GetEngineVersion() != Engine_CSGO) 
